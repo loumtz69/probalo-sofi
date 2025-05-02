@@ -9,12 +9,13 @@ public class playerLife : MonoBehaviour
     public int lifeMin = 0;
     public int lifeActually = 10;
 
-    public void GetDamage(int amount)
+	public void GetDamage(int amount)
     {
+
         if (lifeActually <= lifeMin)
         {
             lifeActually = lifeMin;
-            SceneManager.LoadScene("youDied");
+			SceneLoader.LoadScene("youDied");
         }
     }
     void Update()
